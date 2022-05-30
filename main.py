@@ -58,9 +58,11 @@ class Watch:
         string = f"{file} {ch_type} {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())}\n"
         if os.path.exists(path_log):
             with open(path_log, 'a') as log_f:
+                print(string)
                 log_f.write(string)
         else:
             with open(path_log, 'w') as log_f:
+                print(string)
                 log_f.write(string)
 
     @staticmethod
